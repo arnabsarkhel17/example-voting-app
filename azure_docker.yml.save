@@ -73,11 +73,12 @@
       name: "{{USER}}"
       group: "docker"
       append: "yes"
-  - name: Finding System name
+
+  - name: Finding System_name
     shell: uname -s
     register: system_name
 
-  - name: Finding Machine Architecture
+  - name: Finding Machine_architecture
     shell: uname -m
     register: machine_arch
 
