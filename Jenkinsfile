@@ -22,6 +22,14 @@ pipeline{
           }
         }
 
+        stage('Build images by dockerfiles'){
+            steps{
+                sh './buildImages.sh'
+                echo "Removing old containers if any"
+                sh 'docker rm -f redis db vote worker result'
+            }
+        }
+
         stage('Run Docker Compose'){
             steps{
                 echo "Running Job: ${env.JOB_NAME}\n build: ${env.BUILD_ID}"
