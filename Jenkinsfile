@@ -1,12 +1,6 @@
 pipeline{
     agent any
     stages{
-        stage('Checkout SCM'){
-            steps{
-                git url: 'https://github.com/arnabsarkhel17/example-voting-app.git'
-            }
-        }
-
         stage('SonarQube analysis') {
          steps {
             script {
