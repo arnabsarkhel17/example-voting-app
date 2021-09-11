@@ -8,3 +8,8 @@ docker build -t arnabsarkhel/result-app .
 docker push arnabsarkhel/result-app
 
 cd ..
+cd worker
+docker build -t arnabsarkhel/worker-app .
+docker push arnabsarkhel/worker-app
+
+cd ..

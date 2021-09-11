@@ -31,7 +31,7 @@ services:
       
 
   worker:
-    image: prabhavagrawal/worker-app
+    image: arnabsarkhel/worker-app
     container_name: worker 
     links:
       - "redis:redis"
